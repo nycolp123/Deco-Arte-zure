@@ -1,0 +1,195 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<main class="tienda">
+
+    <section class="tienda-portada">
+        <div class="tienda-portada-contenido">
+            <span class="tienda-etiqueta">DECO ARTE ZURE · BOUTIQUE</span>
+            <h1>Detalles que hacen<br>especial cada momento</h1>
+            <p>Flores, regalos, anchetas y sorpresas preparadas con mucho amor.</p>
+            <a href="#catalogo" class="tienda-boton">Explorar la tienda</a>
+        </div>
+    </section>
+
+    <section class="tienda-intro">
+        <span>UN DETALLE, UNA EMOCIÓN</span>
+        <h2>Encuentra el regalo perfecto</h2>
+        <p>Elige tus productos favoritos, agrégalos al carrito y realiza tu pedido fácilmente.</p>
+    </section>
+
+    <section class="tienda-catalogo" id="catalogo">
+        <div class="tienda-cabecera-catalogo">
+            <div>
+                <span>NUESTRA COLECCIÓN</span>
+                <h2>Compra por categoría</h2>
+            </div>
+            <button class="tienda-carrito-boton" id="abrirCarrito" type="button">
+                🛒 Mi carrito <span id="contadorCarrito">0</span>
+            </button>
+        </div>
+
+        <nav class="tienda-categorias" aria-label="Categorías de productos">
+            <button class="categoria-activa" data-categoria="todos">Todos</button>
+            <button data-categoria="flores">Flores y ramos</button>
+            <button data-categoria="arreglos">Arreglos florales</button>
+            <button data-categoria="anchetas">Anchetas</button>
+            <button data-categoria="regalos">Regalos</button>
+            <button data-categoria="navidad">Navidad</button>
+            <button data-categoria="desayunos">Desayunos</button>
+        </nav>
+
+        <div class="tienda-productos" id="listaProductos">
+
+            <article class="producto" data-categoria="flores">
+                <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=700" alt="Ramo de flores">
+                <div class="producto-info">
+                    <span>FLORES Y RAMOS</span>
+                    <h3>Ramo de flores especial</h3>
+                    <p class="producto-precio" data-precio="85000">$85.000</p>
+                    <button class="agregar-producto" data-id="1" data-nombre="Ramo de flores especial" data-precio="85000">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="arreglos">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700" alt="Arreglo floral">
+                <div class="producto-info">
+                    <span>ARREGLOS FLORALES</span>
+                    <h3>Arreglo floral elegante</h3>
+                    <p class="producto-precio">$120.000</p>
+                    <button class="agregar-producto" data-id="2" data-nombre="Arreglo floral elegante" data-precio="120000">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="anchetas">
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=700" alt="Canasta de regalo">
+                <div class="producto-info">
+                    <span>ANCHETAS</span>
+                    <h3>Ancheta sorpresa</h3>
+                    <p class="producto-precio">$95.000</p>
+                    <button class="agregar-producto" data-id="3" data-nombre="Ancheta sorpresa" data-precio="95000">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="regalos">
+                <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=700" alt="Caja de regalo">
+                <div class="producto-info">
+                    <span>REGALOS Y DETALLES</span>
+                    <h3>Caja de regalo especial</h3>
+                    <p class="producto-precio">$65.000</p>
+                    <button class="agregar-producto" data-id="4" data-nombre="Caja de regalo especial" data-precio="65000">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="navidad">
+                <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=700" alt="Decoración navideña">
+                <div class="producto-info">
+                    <span>COLECCIÓN NAVIDEÑA</span>
+                    <h3>Detalle navideño</h3>
+                    <p class="producto-precio">$55.000</p>
+                    <button class="agregar-producto" data-id="5" data-nombre="Detalle navideño" data-precio="55000">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto" data-categoria="desayunos">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=700" alt="Desayuno sorpresa">
+                <div class="producto-info">
+                    <span>DESAYUNOS SORPRESA</span>
+                    <h3>Desayuno sorpresa</h3>
+                    <p class="producto-precio">$90.000</p>
+                    <button class="agregar-producto" data-id="6" data-nombre="Desayuno sorpresa" data-precio="90000">Agregar al carrito</button>
+                </div>
+            </article>
+
+        </div>
+        <p class="tienda-nota">Los precios e imágenes son de muestra. Puedes cambiarlos por los productos y valores reales de tu boutique.</p>
+    </section>
+
+    <div class="tienda-fondo" id="fondoCarrito"></div>
+
+    <aside class="tienda-panel-carrito" id="panelCarrito" aria-label="Carrito de compras">
+        <div class="carrito-cabecera">
+            <div>
+                <span>DECO ARTE ZURE</span>
+                <h2>Mi carrito 🛒</h2>
+            </div>
+            <button id="cerrarCarrito" class="cerrar-panel" type="button" aria-label="Cerrar carrito">×</button>
+        </div>
+
+        <div id="productosCarrito" class="productos-carrito">
+            <p class="carrito-vacio">Tu carrito está vacío. ¡Agrega tus productos favoritos!</p>
+        </div>
+
+        <div class="carrito-pie">
+            <div class="carrito-total">
+                <span>Total</span>
+                <strong id="totalCarrito">$0</strong>
+            </div>
+            <button id="irAlPedido" class="tienda-boton tienda-boton-completo" type="button">Continuar con mi pedido</button>
+        </div>
+    </aside>
+
+    <section class="tienda-pedido" id="seccionPedido">
+        <div class="pedido-contenedor">
+            <span class="tienda-etiqueta">CASI TERMINAMOS</span>
+            <h2>Completa los datos de tu pedido</h2>
+            <p>Cuéntanos quién recibe el detalle y dónde debemos entregarlo.</p>
+
+            <form id="formularioPedido">
+                <label for="nombreCliente">Nombre completo</label>
+                <input id="nombreCliente" type="text" placeholder="Tu nombre" required>
+
+                <label for="telefonoCliente">Número de teléfono</label>
+                <input id="telefonoCliente" type="tel" placeholder="Tu número de contacto" required>
+
+                <label for="direccionCliente">Dirección de entrega</label>
+                <input id="direccionCliente" type="text" placeholder="Barrio, dirección o lugar de entrega" required>
+
+                <label for="fechaPedido">Fecha de entrega deseada</label>
+                <input id="fechaPedido" type="date">
+
+                <label for="mensajePedido">Dedicatoria o indicaciones (opcional)</label>
+                <textarea id="mensajePedido" rows="3" placeholder="Escribe aquí tu mensaje especial..."></textarea>
+
+                <button class="tienda-boton tienda-boton-completo" type="submit">Continuar al pago</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="tienda-pago" id="seccionPago">
+        <div class="pago-contenedor">
+            <span class="tienda-etiqueta">PAGO DE TU PEDIDO</span>
+            <h2>Escanea y realiza tu pago</h2>
+            <p>Escanea el código QR con la aplicación de tu banco o billetera digital.</p>
+
+            <div class="pago-qr">
+                <img src="{{ url_for('static', filename='img/qr-pago.png') }}" alt="Código QR de pago de Deco Arte Zure">
+            </div>
+
+            <p class="pago-aviso">Verifica que el nombre y los datos del destinatario sean correctos antes de pagar.</p>
+
+            <div class="pago-resumen">
+                <span>Total de tu pedido</span>
+                <strong id="totalPago">$0</strong>
+            </div>
+
+            <ol class="pago-pasos">
+                <li>Escanea el QR y realiza el pago por el valor indicado.</li>
+                <li>Toma una captura o fotografía del comprobante.</li>
+                <li>Pulsa el botón de WhatsApp y adjunta el comprobante en el chat.</li>
+            </ol>
+
+            <button type="button" id="enviarWhatsApp" class="tienda-boton tienda-boton-completo">
+                Enviar pedido y comprobante por WhatsApp
+            </button>
+            <p class="pago-aviso">Tu pedido quedará pendiente de confirmación hasta que Deco Arte Zure verifique el pago y la disponibilidad.</p>
+        </div>
+    </section>
+
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/tienda.js') }}"></script>
+{% endblock %}

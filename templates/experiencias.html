@@ -1,0 +1,310 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="experiencias">
+
+    <!-- PORTADA -->
+    <section class="exp-portada">
+        <div class="exp-portada-contenido">
+            <span>DECO ARTE ZURE PRESENTA</span>
+            <h1>Un lugar para<br>vivir momentos<br><em>inolvidables.</em></h1>
+            <p>
+                Un espacio cálido para compartir, disfrutar de algo delicioso
+                y celebrar la vida con las personas que más quieres.
+            </p>
+            <a href="#planes" class="exp-boton">Descubrir experiencias</a>
+        </div>
+        <div class="exp-portada-firma">Momentos que se quedan en el corazón</div>
+    </section>
+
+    <!-- BIENVENIDA -->
+    <section class="exp-bienvenida">
+        <span class="exp-etiqueta">MÁS QUE UN LUGAR</span>
+        <h2>El placer de compartir sin afanes</h2>
+        <p>
+            Imagina una tarde tranquila, buena compañía, una mesa bonita,
+            comida deliciosa y momentos que se convierten en recuerdos.
+            Aquí cada encuentro tiene algo especial.
+        </p>
+        <div class="exp-beneficios">
+            <div><span>01</span><h3>Un ambiente acogedor</h3><p>Un espacio pensado para descansar y disfrutar.</p></div>
+            <div><span>02</span><h3>Algo delicioso</h3><p>Comidas, bebidas y opciones para compartir.</p></div>
+            <div><span>03</span><h3>Celebraciones</h3><p>Momentos especiales para grandes y pequeños.</p></div>
+        </div>
+    </section>
+
+    <!-- EL LUGAR -->
+    <section class="exp-lugar" id="lugar">
+        <div class="exp-lugar-imagen">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"
+                 alt="Espacio cálido para compartir y disfrutar">
+        </div>
+        <div class="exp-lugar-texto">
+            <span class="exp-etiqueta">NUESTRO ESPACIO</span>
+            <h2>Tu momento, tu espacio, tu celebración.</h2>
+            <p>
+                Ven a disfrutar de una tarde diferente, organiza una reunión
+                familiar, celebra un cumpleaños o alquila el espacio para
+                crear un evento a tu manera.
+            </p>
+            <ul>
+                <li>Encuentros familiares y reuniones de amigos.</li>
+                <li>Tardes de picnic y momentos románticos.</li>
+                <li>Celebraciones privadas y fechas especiales.</li>
+                <li>Cumpleaños y actividades para niños.</li>
+            </ul>
+            <a href="#cotizar" class="exp-boton exp-boton-oscuro">Consultar disponibilidad</a>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="exp-menu" id="menu">
+        <div class="exp-titulo-seccion">
+            <span class="exp-etiqueta">SABORES PARA COMPARTIR</span>
+            <h2>Nuestro menú</h2>
+            <p>Pequeños antojos, bebidas y opciones para disfrutar juntos.</p>
+        </div>
+
+        <div class="exp-menu-categorias">
+            <a href="#bebidas">Bebidas</a>
+            <a href="#comidas">Comidas</a>
+            <a href="#compartir">Para compartir</a>
+            <a href="#combos">Combos</a>
+        </div>
+
+        <div class="exp-menu-grupo" id="bebidas">
+            <div class="exp-menu-encabezado">
+                <span>01 / PARA BRINDAR</span>
+                <h3>Bebidas</h3>
+            </div>
+
+            <div class="exp-menu-grid">
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd0?w=700" alt="Jugos naturales">
+                    <div><h4>Jugos naturales</h4><p>Frutas frescas y mucho sabor.</p><strong>$10.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=700" alt="Limonada refrescante">
+                    <div><h4>Limonada de la casa</h4><p>Una bebida refrescante para compartir.</p><strong>$12.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=700" alt="Vino servido en copas">
+                    <div><h4>Vino por copa</h4><p>Una opción especial para brindar entre adultos.</p><strong>$18.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=700" alt="Bebidas sin alcohol">
+                    <div><h4>Bebida especial sin alcohol</h4><p>Una mezcla deliciosa y refrescante.</p><strong>$14.000</strong></div>
+                </article>
+            </div>
+            <p class="exp-aclaracion">Las bebidas alcohólicas se ofrecen exclusivamente a personas adultas, conforme a la normativa aplicable.</p>
+        </div>
+
+        <div class="exp-menu-grupo" id="comidas">
+            <div class="exp-menu-encabezado">
+                <span>02 / ALGO DELICIOSO</span>
+                <h3>Comidas</h3>
+            </div>
+
+            <div class="exp-menu-grid">
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=700" alt="Papas para compartir">
+                    <div><h4>Papas especiales</h4><p>Papas crocantes con acompañamientos.</p><strong>$22.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700" alt="Hamburguesa">
+                    <div><h4>Hamburguesa de la casa</h4><p>Una opción deliciosa para disfrutar.</p><strong>$28.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700" alt="Pizza">
+                    <div><h4>Pizza para compartir</h4><p>Ideal para disfrutar entre amigos.</p><strong>$35.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700" alt="Ensalada fresca">
+                    <div><h4>Ensalada fresca</h4><p>Una alternativa ligera y deliciosa.</p><strong>$20.000</strong></div>
+                </article>
+            </div>
+        </div>
+
+        <div class="exp-menu-grupo" id="compartir">
+            <div class="exp-menu-encabezado">
+                <span>03 / JUNTOS SABE MEJOR</span>
+                <h3>Para compartir</h3>
+            </div>
+
+            <div class="exp-menu-grid">
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?w=700" alt="Tabla de quesos">
+                    <div><h4>Tabla para compartir</h4><p>Una selección de sabores para disfrutar en compañía.</p><strong>$48.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1505576399273-565b52d4ac71?w=700" alt="Picnic con comida">
+                    <div><h4>Picnic especial</h4><p>Una experiencia preparada para disfrutar al aire libre.</p><strong>$65.000</strong></div>
+                </article>
+                <article class="exp-menu-card">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700" alt="Pasabocas variados">
+                    <div><h4>Pasabocas variados</h4><p>Una selección para reuniones y encuentros.</p><strong>$45.000</strong></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="exp-combos" id="combos">
+        <div class="exp-titulo-seccion">
+            <span class="exp-etiqueta">PLANES PARA CADA OCASIÓN</span>
+            <h2>Elige tu experiencia</h2>
+            <p>Opciones para compartir en pareja, con amigos o en familia.</p>
+        </div>
+
+        <div class="exp-combos-grid">
+            <article class="exp-combo">
+                <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Picnic romántico">
+                <div class="exp-combo-contenido">
+                    <span>PARA DOS</span>
+                    <h3>Picnic especial</h3>
+                    <p>Un espacio decorado, una bebida para cada persona y una selección de pasabocas.</p>
+                    <strong>Desde $120.000</strong>
+                    <a href="#cotizar" class="exp-combo-boton" data-plan="Picnic especial">Cotizar este plan</a>
+                </div>
+            </article>
+
+            <article class="exp-combo exp-combo-destacado">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Reunión con amigos">
+                <div class="exp-combo-contenido">
+                    <span>PARA COMPARTIR</span>
+                    <h3>Tarde entre amigos</h3>
+                    <p>Un lugar reservado, tabla para compartir y bebidas para disfrutar juntos.</p>
+                    <strong>Desde $180.000</strong>
+                    <a href="#cotizar" class="exp-combo-boton" data-plan="Tarde entre amigos">Cotizar este plan</a>
+                </div>
+            </article>
+
+            <article class="exp-combo">
+                <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800" alt="Celebración familiar">
+                <div class="exp-combo-contenido">
+                    <span>PARA LA FAMILIA</span>
+                    <h3>Plan familiar</h3>
+                    <p>Un espacio para reunirse, compartir comida y crear recuerdos especiales.</p>
+                    <strong>Desde $220.000</strong>
+                    <a href="#cotizar" class="exp-combo-boton" data-plan="Plan familiar">Cotizar este plan</a>
+                </div>
+            </article>
+        </div>
+        <p class="exp-aclaracion">Precios ilustrativos. El valor definitivo depende del número de personas, menú, duración y decoración solicitada.</p>
+    </section>
+
+    <!-- ALQUILER -->
+    <section class="exp-alquiler">
+        <div class="exp-alquiler-texto">
+            <span class="exp-etiqueta">UN ESPACIO SOLO PARA TI</span>
+            <h2>Alquila nuestro lugar y celebra a tu manera.</h2>
+            <p>
+                ¿Tienes una idea especial? Puedes alquilar el espacio para
+                una reunión, cumpleaños, encuentro familiar o celebración privada.
+                Personalizamos la experiencia de acuerdo con lo que necesitas.
+            </p>
+            <a href="#cotizar" class="exp-boton">Solicitar cotización</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200" alt="Lugar preparado para una celebración">
+    </section>
+
+    <!-- NIÑOS -->
+    <section class="exp-ninos">
+        <div class="exp-ninos-imagen">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1100" alt="Decoración de cumpleaños infantil">
+        </div>
+        <div class="exp-ninos-texto">
+            <span class="exp-etiqueta">LOS MÁS PEQUEÑOS TAMBIÉN CELEBRAN</span>
+            <h2>¡Cumpleaños llenos de alegría!</h2>
+            <p>
+                Creamos celebraciones infantiles con decoración, comida,
+                bebidas y detalles especiales para que los niños disfruten
+                y las familias vivan un día inolvidable.
+            </p>
+            <ul>
+                <li>Decoración temática según la ocasión.</li>
+                <li>Menús y combos infantiles.</li>
+                <li>Espacio para compartir y celebrar.</li>
+                <li>Opciones de paquetes personalizados.</li>
+            </ul>
+            <a href="#cotizar" class="exp-boton exp-boton-oscuro" data-plan="Cumpleaños infantil">Cotizar cumpleaños infantil</a>
+        </div>
+    </section>
+
+    <!-- COTIZACIÓN -->
+    <section class="exp-cotizacion" id="cotizar">
+        <div class="exp-cotizacion-intro">
+            <span class="exp-etiqueta">HAGAMOS REALIDAD TU PLAN</span>
+            <h2>Cuéntanos qué quieres celebrar.</h2>
+            <p>
+                Completa estos datos y prepararemos una cotización
+                de acuerdo con tu idea, tus invitados y tu presupuesto.
+            </p>
+            <div class="exp-contacto-nota">
+                <strong>¿Tienes una idea diferente?</strong>
+                <p>También podemos crear un plan personalizado para ti.</p>
+            </div>
+        </div>
+
+        <form class="exp-formulario" id="formularioExperiencia">
+            <label for="expNombre">Tu nombre</label>
+            <input id="expNombre" type="text" placeholder="Nombre completo" required>
+
+            <label for="expTelefono">Tu teléfono</label>
+            <input id="expTelefono" type="tel" placeholder="Número de contacto" required>
+
+            <label for="expTipo">¿Qué deseas organizar?</label>
+            <select id="expTipo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Alquiler del lugar</option>
+                <option>Picnic para dos</option>
+                <option>Tarde entre amigos</option>
+                <option>Reunión familiar</option>
+                <option>Cumpleaños infantil</option>
+                <option>Celebración especial</option>
+                <option>Solo quiero visitar y consumir</option>
+                <option>Otro plan personalizado</option>
+            </select>
+
+            <label for="expPersonas">Número de personas</label>
+            <input id="expPersonas" type="number" min="1" placeholder="Ej. 10" required>
+
+            <label for="expFecha">Fecha deseada</label>
+            <input id="expFecha" type="date" required>
+
+            <label for="expPresupuesto">Presupuesto aproximado</label>
+            <select id="expPresupuesto">
+                <option value="">Selecciona tu presupuesto</option>
+                <option>Menos de $150.000</option>
+                <option>Entre $150.000 y $300.000</option>
+                <option>Entre $300.000 y $500.000</option>
+                <option>Más de $500.000</option>
+                <option>Quiero recibir asesoría</option>
+            </select>
+
+            <label for="expDetalles">Cuéntanos más sobre tu idea</label>
+            <textarea id="expDetalles" rows="4" placeholder="Menú, decoración, edades de los niños, horario o cualquier detalle..."></textarea>
+
+            <button class="exp-boton exp-boton-oscuro exp-boton-form" type="submit">
+                Enviar solicitud de cotización por WhatsApp
+            </button>
+            <p class="exp-form-nota">La solicitud no confirma una reserva. Te contactaremos para verificar disponibilidad y precio.</p>
+        </form>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="exp-final">
+        <span>DECO ARTE ZURE</span>
+        <h2>Los mejores momentos<br>se viven compartiendo.</h2>
+        <a href="#cotizar" class="exp-boton">Planea tu experiencia</a>
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/experiencias.js') }}"></script>
+{% endblock %}

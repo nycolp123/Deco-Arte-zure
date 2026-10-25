@@ -1,0 +1,140 @@
+
+{% extends "base.html" %}
+
+{% block title %}Inicio | Deco Arte Zure{% endblock %}
+
+{% block content %}
+
+<section class="portada portada-inicio">
+
+    <div class="portada-capa"></div>
+
+    <div class="portada-contenido">
+
+        <span class="etiqueta">
+            BIENVENIDOS A DECO ARTE ZURE
+        </span>
+
+        <h1>
+            Creamos momentos<br>
+            que merecen <em>magia.</em>
+        </h1>
+
+        <p>
+            Decoraciones, regalos, flores y experiencias
+            especiales para celebrar la vida.
+        </p>
+
+        <a href="{{ url_for('experiencias') }}"
+           class="boton boton-claro">
+            Descubrir nuestro mundo ↗
+        </a>
+
+    </div>
+
+</section>
+
+<section class="seccion presentacion">
+
+    <span class="monograma">Z.</span>
+
+    <div>
+        <span class="etiqueta oscura">NUESTRA ESENCIA</span>
+
+        <h2>
+            Cada ocasión merece<br>
+            algo <em>extraordinario.</em>
+        </h2>
+
+        <p class="parrafo">
+            Somos una marca dedicada a crear momentos especiales.
+            Contamos con servicios de decoración, una boutique de
+            regalos, desayunos sorpresa y experiencias para compartir.
+        </p>
+    </div>
+
+</section>
+
+<section class="seccion zona-experiencias">
+
+    <div class="titulo-seccion">
+        <span class="etiqueta oscura">
+            CONOCE NUESTROS SERVICIOS
+        </span>
+
+        <h2>Descubre nuestro <em>universo.</em></h2>
+    </div>
+
+    <div class="tarjetas">
+
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85" alt="Experiencias">
+
+            <div class="tarjeta-texto">
+                <small>01 · EXPERIENCIAS</small>
+                <h3>Picnic & encuentros</h3>
+                <p>Un espacio tranquilo para compartir y celebrar.</p>
+                <a href="{{ url_for('experiencias') }}">Descubrir más ↗</a>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Decoraciones">
+
+            <div class="tarjeta-texto">
+                <small>02 · DECORACIONES</small>
+                <h3>Celebraciones únicas</h3>
+                <p>Matrimonios, quince años, cumpleaños y más.</p>
+                <a href="{{ url_for('decoraciones') }}">Ver decoraciones ↗</a>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" alt="Boutique">
+
+            <div class="tarjeta-texto">
+                <small>03 · BOUTIQUE</small>
+                <h3>Regalos con emoción</h3>
+                <p>Flores, anchetas y detalles personalizados.</p>
+                <a href="{{ url_for('boutique') }}">Entrar a la tienda ↗</a>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=85" alt="Desayunos">
+
+            <div class="tarjeta-texto">
+                <small>04 · DESAYUNOS</small>
+                <h3>Despierta con magia</h3>
+                <p>Desayunos sorpresa para personas especiales.</p>
+                <a href="{{ url_for('desayunos') }}">Ver desayunos ↗</a>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="frase-final">
+
+    <div class="frase-contenido">
+
+        <span class="etiqueta">
+            TU IDEA MERECE UN TOQUE ESPECIAL
+        </span>
+
+        <h2>
+            Imagina el momento.<br>
+            <em>Nosotros ponemos la magia.</em>
+        </h2>
+
+        <a href="{{ url_for('contacto') }}"
+           class="boton boton-claro">
+            Hablemos ↗
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Deco Arte Zure{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+<div class="barra-superior">
+    EXPERIENCIAS · DECORACIONES · FLORES · REGALOS
+</div>
+
+<header class="encabezado">
+
+    <a href="{{ url_for('inicio') }}" class="marca">
+
+        <img src="{{ url_for('static', filename='img/logo.png') }}"
+             alt="Logo Deco Arte Zure">
+
+        <div class="marca-texto">
+            <span>EXPERIENCIAS & BOUTIQUE</span>
+            <p>Momentos únicos, recuerdos eternos</p>
+        </div>
+
+    </a>
+
+    <button class="boton-menu" id="botonMenu">☰</button>
+
+    <nav class="navegacion" id="navegacion">
+
+        <a href="{{ url_for('inicio') }}">Inicio</a>
+        <a href="{{ url_for('experiencias') }}">Experiencias</a>
+        <a href="{{ url_for('decoraciones') }}">Decoraciones</a>
+        <a href="{{ url_for('boutique') }}">Boutique</a>
+        <a href="{{ url_for('desayunos') }}">Desayunos</a>
+
+        <a href="{{ url_for('contacto') }}" class="enlace-contacto">
+            Cotizar
+        </a>
+
+    </nav>
+
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="pie">
+
+    <h2>DECO ARTE ZURE</h2>
+
+    <p>Momentos que se sienten. Detalles que permanecen.</p>
+    <p>Saravena · Arauca</p>
+
+    <a href="https://wa.me/573114854958" target="_blank">
+        WhatsApp: 311 485 4958
+    </a>
+
+    <div class="pie-final">
+        © 2026 Deco Arte Zure
+    </div>
+
+</footer>
+
+<a class="whatsapp-flotante"
+   href="https://wa.me/573114854958"
+   target="_blank">
+    WhatsApp ✆
+</a>
+
+<button id="volverArriba" class="volver-arriba">↑</button>
+
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

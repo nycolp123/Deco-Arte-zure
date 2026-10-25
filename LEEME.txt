@@ -1,0 +1,29 @@
+DECO ARTE ZURE — PROYECTO PARA VISUAL STUDIO CODE
+
+ESTRUCTURA:
+app.py
+requirements.txt
+templates/index.html
+static/css/estilos.css
+static/js/menu.js
+static/img/logo.png
+
+PASOS:
+1. Extrae esta carpeta.
+2. Abre Visual Studio Code.
+3. Selecciona Archivo > Abrir carpeta y abre deco_arte_zure_visual_studio.
+4. Abre Terminal > Nueva terminal.
+5. Ejecuta:
+   python -m venv venv
+6. Ejecuta:
+   venv\Scripts\activate
+7. Ejecuta:
+   pip install -r requirements.txt
+8. Ejecuta:
+   python app.py
+9. Abre http://127.0.0.1:5000 en Chrome.
+
+El logo ya está guardado en static/img/logo.png.
+Las demás fotografías son imágenes remotas de muestra y requieren internet.
+El enlace WhatsApp es provisional; cambia https://wa.me/57 por https://wa.me/57 seguido del número real, sin espacios.
+El espacio está en adecuación y la página lo comunica. Esta etapa es visual; todavía no tiene cotizador ni base de datos.

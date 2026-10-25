@@ -1,0 +1,304 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="desayunos">
+
+    <!-- PORTADA -->
+    <section class="des-portada">
+        <div class="des-portada-contenido">
+            <span>DECO ARTE ZURE · DESAYUNOS SORPRESA</span>
+            <h1>Despierta con<br>un detalle lleno<br><em>de amor.</em></h1>
+            <p>
+                Sorprende a quienes más quieres con desayunos preparados
+                especialmente para hacer inolvidable su día.
+            </p>
+            <a href="#catalogo-desayunos" class="des-boton">Descubrir desayunos</a>
+        </div>
+        <div class="des-frase-portada">Un amanecer, una sorpresa, una sonrisa.</div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="des-intro">
+        <span class="des-etiqueta">REGALA MOMENTOS BONITOS</span>
+        <h2>Hay detalles que se disfrutan desde el primer momento.</h2>
+        <p>
+            Cumpleaños, aniversarios, grados, fechas especiales o simplemente
+            para recordarle a alguien cuánto lo quieres. Tenemos opciones
+            para niños, niñas y adultos.
+        </p>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="des-categorias" id="catalogo-desayunos">
+        <div class="des-titulo">
+            <span class="des-etiqueta">NUESTRO CATÁLOGO</span>
+            <h2>Encuentra su desayuno ideal</h2>
+            <p>Escoge una categoría y descubre nuestras propuestas.</p>
+        </div>
+
+        <div class="des-filtros">
+            <button class="des-filtro activo" data-filtro="todos">Todos</button>
+            <button class="des-filtro" data-filtro="ninos">Para niños</button>
+            <button class="des-filtro" data-filtro="ninas">Para niñas</button>
+            <button class="des-filtro" data-filtro="adultos">Para adultos</button>
+            <button class="des-filtro" data-filtro="parejas">Para parejas</button>
+            <button class="des-filtro" data-filtro="especiales">Fechas especiales</button>
+        </div>
+
+        <div class="des-productos">
+
+            <article class="des-producto" data-categoria="ninos">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Desayuno infantil">
+                <div class="des-producto-info">
+                    <span>PARA NIÑOS</span>
+                    <h3>Mi pequeño campeón</h3>
+                    <p>Una sorpresa divertida con opciones de desayuno, bebida y un detalle especial.</p>
+                    <strong>$45.000</strong>
+                    <button class="des-elegir" data-plan="Mi pequeño campeón">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="ninas">
+                <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800" alt="Desayuno para niñas">
+                <div class="des-producto-info">
+                    <span>PARA NIÑAS</span>
+                    <h3>Princesa por un día</h3>
+                    <p>Presentación delicada, desayuno delicioso y una sorpresa llena de ternura.</p>
+                    <strong>$55.000</strong>
+                    <button class="des-elegir" data-plan="Princesa por un día">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="adultos">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800" alt="Desayuno para adultos">
+                <div class="des-producto-info">
+                    <span>PARA ADULTOS</span>
+                    <h3>Buenos días especial</h3>
+                    <p>Una combinación deliciosa para comenzar el día con una sonrisa.</p>
+                    <strong>$65.000</strong>
+                    <button class="des-elegir" data-plan="Buenos días especial">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="parejas">
+                <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=800" alt="Desayuno para parejas">
+                <div class="des-producto-info">
+                    <span>PARA DOS</span>
+                    <h3>Despertar juntos</h3>
+                    <p>Un desayuno para compartir en pareja y disfrutar de un momento especial.</p>
+                    <strong>$110.000</strong>
+                    <button class="des-elegir" data-plan="Despertar juntos">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800" alt="Desayuno de cumpleaños">
+                <div class="des-producto-info">
+                    <span>CUMPLEAÑOS</span>
+                    <h3>Feliz vuelta al sol</h3>
+                    <p>Un desayuno sorpresa con temática de cumpleaños y mensaje personalizado.</p>
+                    <strong>$75.000</strong>
+                    <button class="des-elegir" data-plan="Feliz vuelta al sol">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800" alt="Desayuno para celebrar">
+                <div class="des-producto-info">
+                    <span>GRADOS Y LOGROS</span>
+                    <h3>Un logro para celebrar</h3>
+                    <p>Para felicitar, agradecer y celebrar los sueños cumplidos.</p>
+                    <strong>$80.000</strong>
+                    <button class="des-elegir" data-plan="Un logro para celebrar">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="adultos">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800" alt="Desayuno saludable">
+                <div class="des-producto-info">
+                    <span>PARA ADULTOS</span>
+                    <h3>Mañana deliciosa</h3>
+                    <p>Una opción fresca y especial para sorprender con un desayuno diferente.</p>
+                    <strong>$58.000</strong>
+                    <button class="des-elegir" data-plan="Mañana deliciosa">Elegir este desayuno</button>
+                </div>
+            </article>
+
+            <article class="des-producto" data-categoria="especiales">
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800" alt="Desayuno personalizado">
+                <div class="des-producto-info">
+                    <span>PERSONALIZADO</span>
+                    <h3>Diseña tu sorpresa</h3>
+                    <p>Cuéntanos tu idea y creamos una propuesta con los detalles que deseas.</p>
+                    <strong>Por cotizar</strong>
+                    <button class="des-elegir" data-plan="Desayuno personalizado">Cotizar este desayuno</button>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="des-nota">Precios de ejemplo sujetos a cambios según ingredientes, decoración, personalización y domicilio.</p>
+    </section>
+
+    <!-- QUE PUEDE INCLUIR -->
+    <section class="des-incluye">
+        <div class="des-incluye-texto">
+            <span class="des-etiqueta">CADA DETALLE CUENTA</span>
+            <h2>Una sorpresa hecha con cariño.</h2>
+            <p>
+                Podemos personalizar la presentación para que cada desayuno
+                sea diferente. Según el paquete elegido, puedes solicitar:
+            </p>
+            <ul>
+                <li>Opciones de alimentos dulces y salados.</li>
+                <li>Jugos, bebidas y acompañamientos.</li>
+                <li>Decoración según la ocasión.</li>
+                <li>Tarjeta con mensaje personalizado.</li>
+                <li>Globos y detalles decorativos opcionales.</li>
+                <li>Entrega a domicilio, según cobertura y disponibilidad.</li>
+            </ul>
+            <a href="#cotizacion-desayuno" class="des-boton des-boton-oscuro">Personalizar mi desayuno</a>
+        </div>
+        <div class="des-incluye-imagen">
+            <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=1100" alt="Mesa con desayuno especial">
+        </div>
+    </section>
+
+    <!-- EXTRAS -->
+    <section class="des-extras">
+        <div class="des-titulo">
+            <span class="des-etiqueta">HAZLO AÚN MÁS ESPECIAL</span>
+            <h2>Agrega un detalle adicional</h2>
+            <p>Complementos de ejemplo que podrás ofrecer por separado.</p>
+        </div>
+
+        <div class="des-extras-grid">
+            <article>
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600" alt="Globos decorativos">
+                <h3>Decoración con globos</h3>
+                <strong>Desde $15.000</strong>
+            </article>
+            <article>
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600" alt="Flores para regalar">
+                <h3>Ramo de flores</h3>
+                <strong>Desde $30.000</strong>
+            </article>
+            <article>
+                <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=600" alt="Caja de regalo">
+                <h3>Cajita de regalo</h3>
+                <strong>Desde $20.000</strong>
+            </article>
+            <article>
+                <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=600" alt="Tarjeta de regalo">
+                <h3>Tarjeta personalizada</h3>
+                <strong>Desde $5.000</strong>
+            </article>
+        </div>
+    </section>
+
+    <!-- COTIZACIÓN -->
+    <section class="des-cotizacion" id="cotizacion-desayuno">
+        <div class="des-cotizacion-intro">
+            <span class="des-etiqueta">VAMOS A PREPARAR UNA SORPRESA</span>
+            <h2>Cuéntanos para quién es.</h2>
+            <p>
+                Déjanos los datos y te ayudaremos a preparar un desayuno
+                especial, personalizado y adecuado a tu presupuesto.
+            </p>
+            <div class="des-mensaje">
+                <span>💗</span>
+                <p>El mejor regalo no siempre es el más grande, sino el que se prepara pensando en alguien especial.</p>
+            </div>
+        </div>
+
+        <form class="des-formulario" id="formularioDesayuno">
+
+            <label for="desNombre">Tu nombre</label>
+            <input id="desNombre" type="text" placeholder="Nombre de quien realiza el pedido" required>
+
+            <label for="desTelefono">Tu teléfono</label>
+            <input id="desTelefono" type="tel" placeholder="Tu número de contacto" required>
+
+            <label for="desPlan">¿Qué desayuno deseas?</label>
+            <select id="desPlan" required>
+                <option value="">Selecciona un desayuno</option>
+                <option>Mi pequeño campeón</option>
+                <option>Princesa por un día</option>
+                <option>Buenos días especial</option>
+                <option>Despertar juntos</option>
+                <option>Feliz vuelta al sol</option>
+                <option>Un logro para celebrar</option>
+                <option>Mañana deliciosa</option>
+                <option>Desayuno personalizado</option>
+                <option>Quiero otro diseño</option>
+            </select>
+
+            <label for="desDestinatario">¿Para quién es?</label>
+            <input id="desDestinatario" type="text" placeholder="Ej. Mi hija, mi mamá, mi pareja...">
+
+            <label for="desEdad">Edad o edad aproximada</label>
+            <input id="desEdad" type="text" placeholder="Ej. 8 años, 30 años...">
+
+            <label for="desOcasión">¿Qué celebramos?</label>
+            <select id="desOcasión">
+                <option value="">Selecciona la ocasión</option>
+                <option>Cumpleaños</option>
+                <option>Aniversario</option>
+                <option>Día de la madre</option>
+                <option>Día del padre</option>
+                <option>Grado</option>
+                <option>Amor y amistad</option>
+                <option>Celebración infantil</option>
+                <option>Simplemente sorprender</option>
+                <option>Otra ocasión</option>
+            </select>
+
+            <label for="desFecha">Fecha de entrega</label>
+            <input id="desFecha" type="date" required>
+
+            <label for="desHora">Hora aproximada de entrega</label>
+            <input id="desHora" type="time">
+
+            <label for="desDireccion">Dirección de entrega</label>
+            <input id="desDireccion" type="text" placeholder="Barrio, dirección y referencias">
+
+            <label for="desPresupuesto">Presupuesto aproximado</label>
+            <select id="desPresupuesto">
+                <option value="">Selecciona tu presupuesto</option>
+                <option>Menos de $50.000</option>
+                <option>Entre $50.000 y $80.000</option>
+                <option>Entre $80.000 y $120.000</option>
+                <option>Más de $120.000</option>
+                <option>Quiero recibir asesoría</option>
+            </select>
+
+            <label for="desMensaje">Mensaje para la tarjeta o detalles</label>
+            <textarea id="desMensaje" rows="4" placeholder="Escribe la dedicatoria o cuéntanos cómo imaginas la sorpresa..."></textarea>
+
+            <button type="submit" class="des-boton des-boton-oscuro des-boton-form">
+                Solicitar cotización por WhatsApp
+            </button>
+
+            <p class="des-form-nota">
+                La cotización no confirma el pedido. Verificaremos disponibilidad,
+                cobertura de entrega y valor final por WhatsApp.
+            </p>
+        </form>
+    </section>
+
+    <!-- FINAL -->
+    <section class="des-final">
+        <span>DECO ARTE ZURE</span>
+        <h2>Haz que su día<br>comience con una sonrisa.</h2>
+        <a href="#cotizacion-desayuno" class="des-boton">Quiero sorprender</a>
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/desayunos.js') }}"></script>
+{% endblock %}

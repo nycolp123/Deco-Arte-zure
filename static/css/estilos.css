@@ -1,0 +1,2386 @@
+
+:root {
+    --azul: #102f3b;
+    --petroleo: #174653;
+    --champagne: #e7d3b5;
+    --dorado: #b8945e;
+    --beige: #f3ece1;
+    --fondo: #faf7f1;
+    --texto: #243238;
+    --gris: #777b78;
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.barra-superior {
+    background: var(--azul);
+    color: var(--champagne);
+    text-align: center;
+    padding: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.encabezado {
+    height: 125px;
+    padding: 10px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--fondo);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    width: 130px;
+    height: 105px;
+    object-fit: contain;
+}
+
+.marca span {
+    color: var(--dorado);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 11px;
+}
+
+.navegacion a:hover {
+    color: var(--dorado);
+}
+
+.enlace-contacto {
+    border: 1px solid var(--dorado);
+    padding: 13px 18px;
+}
+
+.boton-menu {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+}
+
+.portada {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+.portada:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    animation: movimiento 18s infinite alternate;
+}
+
+.portada-capa {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 30, 39, .85),
+        rgba(10, 30, 39, .25)
+    );
+}
+
+.portada-contenido {
+    position: relative;
+    margin-left: 12%;
+    max-width: 650px;
+    padding: 60px 0;
+    z-index: 2;
+}
+.portada-inicio {
+    min-height: 680px;
+
+    background-image:
+        linear-gradient(
+            rgba(12, 35, 42, 0.35),
+            rgba(12, 35, 42, 0.55)
+        ),
+        url("../img/portada.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    /* Mueve el contenido hacia la izquierda */
+    justify-content: flex-start;
+
+    text-align: left;
+
+    /* Espacio desde el borde izquierdo */
+    padding: 10px 10px 10px 5%;
+
+    position: relative;
+}
+
+@media (max-width: 700px) {
+    .portada-inicio {
+        min-height: 520px;
+        background-position: center;
+    }
+}
+
+.portada-experiencias {
+    background-image: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2000&q=85");
+}
+
+.portada-decoraciones {
+    background-image: url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=85");
+}
+
+.portada-boutique {
+    background-image: url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=85");
+}
+
+.portada-desayunos {
+    background-image: url("https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=2000&q=85");
+}
+
+@keyframes movimiento {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+}
+
+.etiqueta {
+    color: var(--champagne);
+    font-size: 9px;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.etiqueta.oscura {
+    color: var(--dorado);
+}
+
+h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.1;
+}
+
+h1 em, h2 em {
+    color: var(--dorado);
+}
+
+.portada h1 em {
+    color: var(--champagne);
+}
+
+.portada p {
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 25px 0;
+    max-width: 440px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 16px 22px;
+    font-size: 10px;
+    transition: .3s;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+}
+
+.boton-claro {
+    background: var(--champagne);
+    color: var(--azul);
+}
+
+.boton-oscuro {
+    background: var(--azul);
+    color: white;
+}
+
+.seccion {
+    padding: 95px 9%;
+}
+
+.presentacion {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.monograma {
+    font-family: var(--serif);
+    font-size: 120px;
+    color: var(--champagne);
+}
+
+h2 {
+    font-size: clamp(35px, 4vw, 52px);
+    color: var(--azul);
+    line-height: 1.2;
+}
+
+.parrafo {
+    color: var(--gris);
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.zona-experiencias {
+    background: var(--beige);
+}
+
+.titulo-seccion {
+    margin-bottom: 40px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: var(--fondo);
+    overflow: hidden;
+    transition: .4s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px #102f3b20;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.04);
+}
+
+.tarjeta-texto {
+    padding: 25px;
+}
+
+.tarjeta small {
+    color: var(--dorado);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.tarjeta h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.tarjeta p {
+    color: var(--gris);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.tarjeta a {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 10px;
+    border-bottom: 1px solid var(--dorado);
+    padding-bottom: 6px;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.categorias-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+.categorias-grid img:hover {
+    transform: translateY(-5px);
+}
+
+.categorias-grid h3 {
+    font-size: 23px;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.dos-columnas img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.frase-final {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 60px 12%;
+    background:
+        linear-gradient(#102f3b99, #102f3bcc),
+        url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1800&q=85") center/cover;
+    color: white;
+}
+
+.frase-contenido h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.aviso {
+    margin-top: 25px;
+    color: var(--gris);
+    font-size: 10px;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.pie {
+    background: var(--azul);
+    color: white;
+    padding: 55px 9% 20px;
+    text-align: center;
+}
+
+.pie h2 {
+    color: var(--champagne);
+    font-size: 28px;
+}
+
+.pie p {
+    margin: 15px 0;
+    color: #d9d9d3;
+    font-size: 11px;
+}
+
+.pie a {
+    color: var(--champagne);
+    font-size: 11px;
+}
+
+.pie-final {
+    border-top: 1px solid #ffffff30;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 9px;
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #1d7657;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 40px;
+    z-index: 30;
+    font-size: 11px;
+}
+
+.volver-arriba {
+    position: fixed;
+    right: 25px;
+    bottom: 85px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+    background: var(--azul);
+    color: white;
+    font-size: 22px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 29;
+}
+
+.volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width:850px) {
+    .navegacion {
+        gap: 12px;
+    }
+
+    .seccion {
+        padding: 70px 7%;
+    }
+}
+
+@media(max-width:650px) {
+    .encabezado {
+        height: 90px;
+    }
+
+    .marca img {
+        width: 85px;
+        height: 80px;
+    }
+
+    .boton-menu {
+        display: block;
+    }
+
+    .navegacion {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: var(--fondo);
+        padding: 25px 7%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navegacion.abierto {
+        display: flex;
+    }
+
+    .portada {
+        min-height: 570px;
+    }
+
+    .portada-contenido {
+        margin: 0 7%;
+    }
+
+    .presentacion,
+    .contacto,
+    .dos-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .monograma {
+        font-size: 75px;
+    }
+
+    .tarjetas,
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: 260px;
+    }
+}
+
+/* =====================================
+   TIENDA VIRTUAL - DECO ARTE ZURE
+===================================== */
+
+.tienda {
+    --tienda-azul: #102f3b;
+    --tienda-petroleo: #174653;
+    --tienda-dorado: #b8945e;
+    --tienda-beige: #f3ece1;
+    --tienda-crema: #faf7f1;
+    color: var(--tienda-azul);
+}
+
+.tienda-portada {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 65px 9%;
+    background:
+        linear-gradient(90deg, rgba(10, 35, 43, .88), rgba(10, 35, 43, .25)),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1800") center/cover;
+}
+
+.tienda-portada-contenido {
+    max-width: 650px;
+    color: white;
+}
+
+.tienda-etiqueta,
+.tienda-intro > span,
+.tienda-cabecera-catalogo span {
+    color: var(--tienda-dorado);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.tienda-portada h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.tienda-portada p {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 480px;
+    color: #f5eee5;
+}
+
+.tienda-boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--tienda-dorado);
+    color: white;
+    text-decoration: none;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s ease;
+    font-family: inherit;
+}
+
+.tienda-boton:hover {
+    background: var(--tienda-petroleo);
+    transform: translateY(-3px);
+}
+
+.tienda-intro {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.tienda-intro h2,
+.tienda-cabecera-catalogo h2,
+.pedido-contenedor h2,
+.pago-contenedor h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 12px 0;
+}
+
+.tienda-intro p {
+    color: #777;
+}
+
+.tienda-catalogo {
+    padding: 30px 7% 80px;
+}
+
+.tienda-cabecera-catalogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.tienda-carrito-boton {
+    background: var(--tienda-azul);
+    color: white;
+    padding: 13px 18px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.tienda-carrito-boton span {
+    background: var(--tienda-dorado);
+    border-radius: 50%;
+    padding: 3px 8px;
+    margin-left: 6px;
+}
+
+.tienda-categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 25px 0 30px;
+}
+
+.tienda-categorias button {
+    border: 1px solid #d9cbb8;
+    background: white;
+    color: var(--tienda-azul);
+    padding: 10px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tienda-categorias button:hover,
+.tienda-categorias button.categoria-activa {
+    background: var(--tienda-azul);
+    color: white;
+    border-color: var(--tienda-azul);
+}
+
+.tienda-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(20, 40, 40, .08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(20, 40, 40, .14);
+}
+
+.producto[hidden] {
+    display: none;
+}
+
+.producto img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+    padding: 20px;
+}
+
+.producto-info > span {
+    color: var(--tienda-dorado);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.producto-info h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.producto-precio {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--tienda-petroleo);
+}
+
+.agregar-producto {
+    width: 100%;
+    border: 1px solid var(--tienda-azul);
+    color: var(--tienda-azul);
+    background: transparent;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.agregar-producto:hover {
+    background: var(--tienda-azul);
+    color: white;
+}
+
+.tienda-nota {
+    color: #777;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* Panel del carrito */
+
+.tienda-fondo {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .48);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.tienda-fondo.fondo-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tienda-panel-carrito {
+    position: fixed;
+    top: 0;
+    right: -460px;
+    width: min(420px, 100%);
+    height: 100vh;
+    height: 100dvh;
+    background: var(--tienda-crema);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, .15);
+    transition: right .35s ease;
+}
+
+.tienda-panel-carrito.carrito-abierto {
+    right: 0;
+}
+
+.sin-desplazamiento {
+    overflow: hidden;
+}
+
+.carrito-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2d8ca;
+    padding-bottom: 18px;
+}
+
+.carrito-cabecera span {
+    color: var(--tienda-dorado);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.carrito-cabecera h2 {
+    margin: 7px 0 0;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.cerrar-panel {
+    border: 0;
+    background: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--tienda-azul);
+}
+
+.productos-carrito {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.carrito-vacio {
+    color: #777;
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2d8ca;
+}
+
+.carrito-producto h3 {
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.carrito-producto p {
+    margin: 0 0 10px;
+    color: var(--tienda-petroleo);
+    font-weight: 700;
+}
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cantidad-control button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #c9b99f;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.eliminar-producto {
+    border: 0;
+    background: transparent;
+    color: #a33;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.carrito-pie {
+    border-top: 1px solid #e2d8ca;
+    padding-top: 18px;
+}
+
+.carrito-total,
+.pago-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.carrito-total strong,
+.pago-resumen strong {
+    font-size: 22px;
+    color: var(--tienda-petroleo);
+}
+
+.tienda-boton-completo {
+    width: 100%;
+}
+
+/* Datos del pedido y pago */
+
+.tienda-pedido,
+.tienda-pago {
+    display: none;
+    padding: 65px 20px;
+    background: var(--tienda-beige);
+}
+
+.tienda-pedido.seccion-visible,
+.tienda-pago.seccion-visible {
+    display: block;
+}
+
+.pedido-contenedor,
+.pago-contenedor {
+    max-width: 620px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(20, 40, 40, .08);
+}
+
+.pedido-contenedor > p,
+.pago-contenedor > p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.pedido-contenedor form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.pedido-contenedor label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.pedido-contenedor input,
+.pedido-contenedor textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9d0c4;
+    border-radius: 5px;
+    font: inherit;
+    background: #fffdfa;
+}
+
+.pedido-contenedor input:focus,
+.pedido-contenedor textarea:focus {
+    outline: 2px solid var(--tienda-dorado);
+    border-color: transparent;
+}
+
+.pago-contenedor {
+    text-align: center;
+}
+
+.pago-qr {
+    width: min(280px, 100%);
+    margin: 25px auto;
+    padding: 15px;
+    border: 1px solid #e2d8ca;
+    border-radius: 10px;
+    background: white;
+}
+
+.pago-qr img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pago-aviso {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pago-resumen {
+    background: var(--tienda-beige);
+    padding: 18px;
+    border-radius: 6px;
+    margin: 25px 0;
+}
+
+.pago-pasos {
+    text-align: left;
+    line-height: 1.8;
+    padding-left: 22px;
+    margin-bottom: 25px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 850px) {
+    .tienda-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tienda-portada {
+        min-height: 380px;
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 560px) {
+    .tienda-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .tienda-cabecera-catalogo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .tienda-portada {
+        min-height: 350px;
+    }
+
+    .tienda-portada h1 {
+        font-size: 39px;
+    }
+
+    .producto img {
+        height: 230px;
+    }
+
+    .pedido-contenedor,
+    .pago-contenedor {
+        padding: 23px 17px;
+    }
+
+    .tienda-categorias {
+        gap: 8px;
+    }
+
+    .tienda-categorias button {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+}
+
+/* =========================================
+   EXPERIENCIAS - DECO ARTE ZURE
+========================================= */
+
+.experiencias {
+    --exp-verde: #34483b;
+    --exp-verde-oscuro: #24372e;
+    --exp-crema: #f5eee4;
+    --exp-beige: #e8dccb;
+    --exp-dorado: #b99569;
+    --exp-texto: #38352e;
+    background: #faf7f1;
+    color: var(--exp-texto);
+}
+
+.exp-portada {
+    min-height: 660px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    background:
+        linear-gradient(90deg, rgba(28, 43, 33, .85), rgba(28, 43, 33, .15)),
+        url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1900") center/cover;
+    color: white;
+}
+
+.exp-portada-contenido {
+    max-width: 650px;
+    animation: expEntrada 1s ease both;
+}
+
+.exp-portada-contenido > span,
+.exp-etiqueta {
+    color: var(--exp-dorado);
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.exp-portada h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: 1.05;
+    margin: 22px 0;
+}
+
+.exp-portada h1 em {
+    color: #d9bd91;
+    font-weight: 400;
+}
+
+.exp-portada p {
+    max-width: 470px;
+    line-height: 1.9;
+    font-size: 16px;
+    color: #f1ede5;
+    margin-bottom: 28px;
+}
+
+.exp-portada-firma {
+    position: absolute;
+    right: 8%;
+    bottom: 35px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    color: #f2e6d3;
+    font-size: 18px;
+}
+
+.exp-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--exp-dorado);
+    color: white;
+    padding: 15px 24px;
+    text-decoration: none;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.exp-boton:hover {
+    background: var(--exp-verde);
+    transform: translateY(-3px);
+}
+
+.exp-boton-oscuro {
+    background: var(--exp-verde);
+}
+
+.exp-boton-oscuro:hover {
+    background: var(--exp-dorado);
+}
+
+/* Bienvenida */
+
+.exp-bienvenida {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.exp-bienvenida h2,
+.exp-titulo-seccion h2,
+.exp-lugar-texto h2,
+.exp-ninos-texto h2,
+.exp-cotizacion-intro h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    color: var(--exp-verde);
+    margin: 15px 0;
+}
+
+.exp-bienvenida > p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #777;
+    line-height: 1.9;
+}
+
+.exp-beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: 65px;
+    text-align: left;
+}
+
+.exp-beneficios > div {
+    padding: 30px;
+    background: var(--exp-crema);
+    border-bottom: 3px solid var(--exp-dorado);
+}
+
+.exp-beneficios span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 35px;
+    color: var(--exp-dorado);
+}
+
+.exp-beneficios h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--exp-verde);
+    font-size: 21px;
+}
+
+.exp-beneficios p {
+    color: #777;
+    line-height: 1.7;
+}
+
+/* Espacio */
+
+.exp-lugar {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    background: var(--exp-crema);
+}
+
+.exp-lugar-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    object-fit: cover;
+}
+
+.exp-lugar-texto {
+    padding: 75px 10%;
+    align-self: center;
+}
+
+.exp-lugar-texto p,
+.exp-ninos-texto p {
+    color: #706e64;
+    line-height: 1.9;
+}
+
+.exp-lugar-texto ul,
+.exp-ninos-texto ul {
+    padding-left: 20px;
+    color: #625f55;
+    line-height: 2.2;
+    margin: 25px 0;
+}
+
+/* Menú */
+
+.exp-menu {
+    padding: 100px 8%;
+}
+
+.exp-titulo-seccion {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.exp-titulo-seccion > p {
+    color: #777;
+    line-height: 1.8;
+}
+
+.exp-menu-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 65px;
+}
+
+.exp-menu-categorias a {
+    padding: 11px 19px;
+    border: 1px solid #c8b99f;
+    color: var(--exp-verde);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: .2s;
+}
+
+.exp-menu-categorias a:hover {
+    background: var(--exp-verde);
+    color: white;
+}
+
+.exp-menu-grupo {
+    margin-bottom: 70px;
+    scroll-margin-top: 110px;
+}
+
+.exp-menu-encabezado {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #d8cbb9;
+    padding-bottom: 15px;
+}
+
+.exp-menu-encabezado span {
+    color: var(--exp-dorado);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.exp-menu-encabezado h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 34px;
+    color: var(--exp-verde);
+    margin: 8px 0 0;
+}
+
+.exp-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.exp-menu-card {
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    gap: 20px;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+    box-shadow: 0 5px 20px rgba(40, 45, 35, .06);
+    transition: .3s;
+}
+
+.exp-menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(40, 45, 35, .1);
+}
+
+.exp-menu-card img {
+    width: 155px;
+    height: 135px;
+    object-fit: cover;
+}
+
+.exp-menu-card h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--exp-verde);
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.exp-menu-card p {
+    color: #858176;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.exp-menu-card strong {
+    color: #987447;
+    font-size: 17px;
+}
+
+.exp-aclaracion {
+    color: #888174;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+/* Combos */
+
+.exp-combos {
+    background: var(--exp-verde-oscuro);
+    padding: 100px 8%;
+}
+
+.exp-combos .exp-titulo-seccion h2 {
+    color: #fff5e8;
+}
+
+.exp-combos .exp-titulo-seccion p {
+    color: #d3d2c7;
+}
+
+.exp-combos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.exp-combo {
+    background: #faf7f1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.exp-combo:hover {
+    transform: translateY(-8px);
+}
+
+.exp-combo-destacado {
+    border: 2px solid var(--exp-dorado);
+}
+
+.exp-combo > img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.exp-combo-contenido {
+    padding: 28px;
+}
+
+.exp-combo-contenido > span {
+    color: var(--exp-dorado);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.exp-combo h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    color: var(--exp-verde);
+}
+
+.exp-combo p {
+    color: #777;
+    line-height: 1.8;
+    min-height: 85px;
+}
+
+.exp-combo strong {
+    display: block;
+    font-size: 20px;
+    color: #987447;
+    margin: 18px 0;
+}
+
+.exp-combo-boton {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--exp-verde);
+    color: white;
+    padding: 13px;
+    transition: .2s;
+}
+
+.exp-combo-boton:hover {
+    background: var(--exp-dorado);
+}
+
+/* Alquiler */
+
+.exp-alquiler {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--exp-crema);
+}
+
+.exp-alquiler-texto {
+    padding: 80px 10%;
+    align-self: center;
+}
+
+.exp-alquiler-texto h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--exp-verde);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+}
+
+.exp-alquiler-texto p {
+    color: #777;
+    line-height: 1.9;
+    margin: 25px 0;
+}
+
+.exp-alquiler > img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+}
+
+/* Cumpleaños infantiles */
+
+.exp-ninos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.exp-ninos-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.exp-ninos-texto {
+    padding: 75px 10%;
+    align-self: center;
+}
+
+/* Cotización */
+
+.exp-cotizacion {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 60px;
+    padding: 100px 9%;
+    background: #eee5d8;
+}
+
+.exp-cotizacion-intro {
+    align-self: start;
+    position: sticky;
+    top: 120px;
+}
+
+.exp-cotizacion-intro > p {
+    color: #777;
+    line-height: 1.9;
+}
+
+.exp-contacto-nota {
+    padding: 25px;
+    margin-top: 35px;
+    border-left: 3px solid var(--exp-dorado);
+    background: rgba(255, 255, 255, .45);
+}
+
+.exp-contacto-nota strong {
+    color: var(--exp-verde);
+}
+
+.exp-contacto-nota p {
+    color: #777;
+}
+
+.exp-formulario {
+    background: #fff;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    box-shadow: 0 10px 35px rgba(40, 45, 35, .08);
+}
+
+.exp-formulario label {
+    color: var(--exp-verde);
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.exp-formulario input,
+.exp-formulario select,
+.exp-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ded5c9;
+    border-radius: 3px;
+    font: inherit;
+    background: #fdfbf8;
+    color: #39382f;
+}
+
+.exp-formulario input:focus,
+.exp-formulario select:focus,
+.exp-formulario textarea:focus {
+    outline: 2px solid var(--exp-dorado);
+    border-color: transparent;
+}
+
+.exp-boton-form {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.exp-form-nota {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Cierre */
+
+.exp-final {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background:
+        linear-gradient(rgba(29, 48, 36, .83), rgba(29, 48, 36, .83)),
+        url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1600") center/cover;
+}
+
+.exp-final > span {
+    color: #dfc397;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.exp-final h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(34px, 5vw, 57px);
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+
+@keyframes expEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 850px) {
+    .exp-lugar,
+    .exp-alquiler,
+    .exp-ninos,
+    .exp-cotizacion {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-lugar-imagen img,
+    .exp-alquiler > img,
+    .exp-ninos-imagen img {
+        min-height: 340px;
+        max-height: 430px;
+    }
+
+    .exp-beneficios {
+        gap: 15px;
+    }
+
+    .exp-combos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exp-cotizacion-intro {
+        position: static;
+    }
+}
+
+@media (max-width: 580px) {
+    .exp-portada {
+        min-height: 570px;
+        padding: 65px 7%;
+    }
+
+    .exp-portada h1 {
+        font-size: 49px;
+    }
+
+    .exp-portada-firma {
+        left: 7%;
+        right: auto;
+        font-size: 14px;
+    }
+
+    .exp-bienvenida,
+    .exp-menu,
+    .exp-combos,
+    .exp-cotizacion {
+        padding: 65px 6%;
+    }
+
+    .exp-beneficios,
+    .exp-combos-grid,
+    .exp-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-menu-card {
+        grid-template-columns: 115px 1fr;
+        gap: 13px;
+    }
+
+    .exp-menu-card img {
+        width: 115px;
+        height: 120px;
+    }
+
+    .exp-menu-card h4 {
+        font-size: 17px;
+    }
+
+    .exp-menu-card p {
+        font-size: 12px;
+    }
+
+    .exp-formulario {
+        padding: 23px 17px;
+    }
+
+    .exp-lugar-texto,
+    .exp-alquiler-texto,
+    .exp-ninos-texto {
+        padding: 55px 7%;
+    }
+}
+
+/* =========================================
+   DESAYUNOS SORPRESA - DECO ARTE ZURE
+========================================= */
+
+.desayunos {
+    --des-verde: #34483b;
+    --des-verde-oscuro: #24372e;
+    --des-crema: #faf6ef;
+    --des-rosa: #d9a6a5;
+    --des-dorado: #b99569;
+    --des-texto: #39372f;
+    color: var(--des-texto);
+    background: var(--des-crema);
+}
+
+.des-portada {
+    min-height: 640px;
+    padding: 80px 9%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(44, 39, 35, .83), rgba(44, 39, 35, .15)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1800") center/cover;
+}
+
+.des-portada-contenido {
+    max-width: 650px;
+    animation: desAparecer 1s ease both;
+}
+
+.des-portada-contenido > span,
+.des-etiqueta {
+    color: var(--des-dorado);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.des-portada h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(50px, 7vw, 84px);
+    line-height: 1.05;
+    margin: 22px 0;
+}
+
+.des-portada h1 em {
+    color: #e8c6bd;
+    font-weight: 400;
+}
+
+.des-portada p {
+    max-width: 460px;
+    line-height: 1.9;
+    color: #f5eee8;
+    margin-bottom: 28px;
+}
+
+.des-frase-portada {
+    position: absolute;
+    bottom: 30px;
+    right: 8%;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    color: white;
+    font-size: 17px;
+}
+
+.des-boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--des-dorado);
+    color: white;
+    text-decoration: none;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.des-boton:hover {
+    background: var(--des-verde);
+    transform: translateY(-3px);
+}
+
+.des-boton-oscuro {
+    background: var(--des-verde);
+}
+
+.des-boton-oscuro:hover {
+    background: var(--des-dorado);
+}
+
+/* Introducción */
+
+.des-intro {
+    padding: 95px 9%;
+    text-align: center;
+}
+
+.des-intro h2,
+.des-titulo h2,
+.des-incluye-texto h2,
+.des-cotizacion-intro h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--des-verde);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.des-intro h2 {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.des-intro p,
+.des-titulo p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: #777;
+}
+
+/* Catálogo */
+
+.des-categorias {
+    padding: 60px 8% 100px;
+}
+
+.des-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.des-filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.des-filtro {
+    padding: 11px 19px;
+    border: 1px solid #d8c9b7;
+    background: white;
+    color: var(--des-verde);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.des-filtro:hover,
+.des-filtro.activo {
+    background: var(--des-verde);
+    color: white;
+    border-color: var(--des-verde);
+}
+
+.des-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.des-producto {
+    background: white;
+    box-shadow: 0 7px 25px rgba(45, 40, 35, .08);
+    overflow: hidden;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.des-producto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(45, 40, 35, .14);
+}
+
+.des-producto[hidden] {
+    display: none;
+}
+
+.des-producto img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+}
+
+.des-producto-info {
+    padding: 23px;
+}
+
+.des-producto-info > span {
+    font-size: 10px;
+    color: var(--des-dorado);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.des-producto-info h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    color: var(--des-verde);
+    margin: 10px 0;
+}
+
+.des-producto-info p {
+    color: #777;
+    line-height: 1.7;
+    min-height: 70px;
+    font-size: 14px;
+}
+
+.des-producto-info strong {
+    display: block;
+    font-size: 21px;
+    color: #987447;
+    margin: 15px 0;
+}
+
+.des-elegir {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--des-verde);
+    color: var(--des-verde);
+    background: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.des-elegir:hover {
+    background: var(--des-verde);
+    color: white;
+}
+
+.des-nota {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 25px;
+}
+
+/* Qué incluye */
+
+.des-incluye {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #eee4d8;
+}
+
+.des-incluye-texto {
+    padding: 75px 10%;
+    align-self: center;
+}
+
+.des-incluye-texto p,
+.des-incluye-texto li {
+    color: #716e64;
+    line-height: 1.9;
+}
+
+.des-incluye-texto ul {
+    padding-left: 20px;
+    margin: 25px 0;
+}
+
+.des-incluye-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+}
+
+/* Complementos */
+
+.des-extras {
+    padding: 100px 8%;
+}
+
+.des-extras-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.des-extras-grid article {
+    background: white;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(40, 40, 35, .06);
+    transition: .3s;
+}
+
+.des-extras-grid article:hover {
+    transform: translateY(-5px);
+}
+
+.des-extras-grid img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.des-extras-grid h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--des-verde);
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.des-extras-grid strong {
+    color: #987447;
+}
+
+/* Formulario de cotización */
+
+.des-cotizacion {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 55px;
+    padding: 100px 9%;
+    background: #eee5d8;
+}
+
+.des-cotizacion-intro {
+    align-self: start;
+    position: sticky;
+    top: 120px;
+}
+
+.des-cotizacion-intro > p {
+    color: #777;
+    line-height: 1.9;
+}
+
+.des-mensaje {
+    margin-top: 35px;
+    padding: 25px;
+    background: rgba(255, 255, 255, .5);
+    border-left: 3px solid var(--des-rosa);
+}
+
+.des-mensaje span {
+    font-size: 25px;
+}
+
+.des-mensaje p {
+    color: #777;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.des-formulario {
+    background: white;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    box-shadow: 0 10px 35px rgba(40, 40, 35, .08);
+}
+
+.des-formulario label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--des-verde);
+    margin-top: 8px;
+}
+
+.des-formulario input,
+.des-formulario select,
+.des-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ded5c9;
+    border-radius: 3px;
+    background: #fdfbf8;
+    font: inherit;
+    color: #39372f;
+}
+
+.des-formulario input:focus,
+.des-formulario select:focus,
+.des-formulario textarea:focus {
+    outline: 2px solid var(--des-dorado);
+    border-color: transparent;
+}
+
+.des-boton-form {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.des-form-nota {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Cierre */
+
+.des-final {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(45, 43, 37, .8), rgba(45, 43, 37, .8)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600") center/cover;
+}
+
+.des-final > span {
+    color: #e6c49a;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.des-final h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+
+@keyframes desAparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .des-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .des-incluye,
+    .des-cotizacion {
+        grid-template-columns: 1fr;
+    }
+
+    .des-incluye-imagen img {
+        min-height: 350px;
+        max-height: 450px;
+    }
+
+    .des-cotizacion-intro {
+        position: static;
+    }
+
+    .des-extras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .des-portada {
+        min-height: 560px;
+        padding: 60px 7%;
+    }
+
+    .des-portada h1 {
+        font-size: 48px;
+    }
+
+    .des-frase-portada {
+        left: 7%;
+        right: auto;
+        font-size: 14px;
+    }
+
+    .des-intro,
+    .des-categorias,
+    .des-extras,
+    .des-cotizacion {
+        padding: 65px 6%;
+    }
+
+    .des-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .des-producto img {
+        height: 245px;
+    }
+
+    .des-extras-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+    }
+
+    .des-extras-grid img {
+        height: 145px;
+    }
+
+    .des-extras-grid h3 {
+        font-size: 15px;
+    }
+
+    .des-formulario {
+        padding: 23px 17px;
+    }
+}
+/* LOGO Y NOMBRE DE LA MARCA */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 155px;
+    height: 125px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.marca img:hover {
+    transform: scale(1.07);
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.marca-texto p {
+    margin: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .marca {
+        gap: 9px;
+    }
+
+    .marca img {
+        width: 95px;
+        height: 85px;
+    }
+
+    .marca-texto h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .marca-texto p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
+/* =====================================
+   ENCABEZADO ELEGANTE DECO ARTE ZURE
+===================================== */
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 200px;
+    height: 175px;
+    object-fit: contain;
+    transition: transform .4s ease;
+}
+
+.marca img:hover {
+    transform: scale(1.08);
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.marca-texto span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #070303;
+}
+
+.marca-texto p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #476fff;
+    margin: 0;
+}
+
+/* VERSIÓN PARA CELULARES */
+
+@media (max-width: 700px) {
+
+    .marca {
+        gap: 8px;
+    }
+
+    .marca img {
+        width: 100px;
+        height: 85px;
+    }
+
+    .marca-texto h1 {
+        font-size: 27px;
+    }
+
+    .marca-texto span {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .marca-texto p {
+        font-size: 8px;
+    }
+
+}
+/* PORTADA PRINCIPAL DE DECO ARTE ZURE */
+
+.portada.portada-inicio {
+    min-height: 680px;
+
+    background:
+        linear-gradient(
+            rgba(12, 35, 42, 0.15),
+            rgba(12, 35, 42, 0.30)
+        ),
+        url("/static/img/portada.jpeg") center center / cover no-repeat !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Quitamos la capa gris anterior */
+
+.portada.portada-inicio .portada-capa {
+    background: transparent !important;
+    opacity: 1 !important;
+}
+
+.portada.portada-inicio .portada-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 700px) {
+    .portada.portada-inicio {
+        min-height: 520px;
+    }
+}
